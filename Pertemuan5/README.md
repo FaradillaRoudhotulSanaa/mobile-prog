@@ -1,7 +1,7 @@
 # Jobsheet 5
 Faradilla Roudhotul Sa'naa - 2241720205 - 10 - TI 3B
 
-Praktikum 3 : Membuat Repository Gothub dan Laporan Praktikum 
+Praktikum 3 : Membuat Repository Github dan Laporan Praktikum <br>
 ![Screenshot hello_world](Pertemuan5\hello_world\images\P3-L12.png)
 
 Praktikum 4 : Menerapkan Widget Dasar <br>
