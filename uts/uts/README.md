@@ -1,4 +1,4 @@
-# UTS Pembelejaran Mobile 
+# UTS Pembelajaran Mobile
 
-Faradilla Roudhotul Sa'naa 
+Faradilla Roudhotul Sa'naa <br>
 2241720205 / TI-3B
