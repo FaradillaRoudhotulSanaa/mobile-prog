@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class InboxPage extends StatelessWidget {
+  const InboxPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -11,7 +13,7 @@ class InboxPage extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           centerTitle: true,
-          title: Text(
+          title: const Text(
             'Inbox',
             style: TextStyle(
               color: Colors.black,
@@ -21,11 +23,11 @@ class InboxPage extends StatelessWidget {
           bottom: TabBar(
             labelColor: Colors.black,
             unselectedLabelColor: Colors.grey,
-            indicatorColor: Color.fromARGB(255, 205, 34, 51),
+            indicatorColor: const Color.fromARGB(255, 205, 34, 51),
             indicatorSize: TabBarIndicatorSize.tab,
             splashFactory: NoSplash.splashFactory,
-            overlayColor: MaterialStateProperty.all(Colors.transparent),
-            tabs: [
+            overlayColor: WidgetStateProperty.all(Colors.transparent),
+            tabs: const [
               Tab(text: 'Notification'),
               Tab(text: 'Updates'),
             ],
@@ -53,8 +55,8 @@ class InboxPage extends StatelessWidget {
             'images/inbox.png',
             height: 200,
           ),
-          SizedBox(height: 24),
-          Text(
+          const SizedBox(height: 24),
+          const Text(
             'No Messages Yet',
             style: TextStyle(
               fontSize: 18,
@@ -62,7 +64,7 @@ class InboxPage extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             "Dont worry, you'll be the first one to know if there is only messages sent for you",
             style: TextStyle(
@@ -85,8 +87,8 @@ class InboxPage extends StatelessWidget {
             'images/inbox.png',
             height: 200,
           ),
-          SizedBox(height: 24),
-          Text(
+          const SizedBox(height: 24),
+          const Text(
             'No Messages Yet',
             style: TextStyle(
               fontSize: 18,
@@ -94,7 +96,7 @@ class InboxPage extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             "Dont worry, you'll be the first one to know if there is only messages sent for you",
             style: TextStyle(

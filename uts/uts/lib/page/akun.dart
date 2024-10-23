@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 
 class Akun extends StatelessWidget {
+  const Akun({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           '',
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 16),
+            padding: EdgeInsets.only(right: 16),
             child: Icon(Icons.signal_cellular_alt, color: Colors.black),
           )
         ],
@@ -26,14 +28,14 @@ class Akun extends StatelessWidget {
             children: [
               // User Profile Section
               Container(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 color: Colors.white,
                 child: Row(
                   mainAxisAlignment:
                       MainAxisAlignment.spaceBetween, // Move profile to right
                   children: [
                     // Name and Phone Number on the left
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -47,12 +49,12 @@ class Akun extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(width: 16),
+                    const SizedBox(width: 16),
                     // Profile Picture on the right
                     Container(
                       width: 60,
                       height: 60,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                           image: AssetImage(
@@ -64,7 +66,7 @@ class Akun extends StatelessWidget {
                   ],
                 ),
               ),
-              Divider(),
+              const Divider(),
               // Menu List Section
               _buildMenuItem('Account Type', 'FULL SERVICE'),
               _buildMenuItem('Account Settings', ''),
@@ -77,11 +79,11 @@ class Akun extends StatelessWidget {
               _buildMenuItem('Terms of Service', ''),
               _buildMenuItem('Privacy Policy', ''),
               _buildMenuItem('Help Center', ''),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               // Logout Button
               TextButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   'Logout',
                   style: TextStyle(color: Colors.red),
                 ),
@@ -97,7 +99,7 @@ class Akun extends StatelessWidget {
     return ListTile(
       title: Text(title),
       subtitle: subtitle.isNotEmpty ? Text(subtitle) : null,
-      trailing: Icon(Icons.arrow_forward_ios, size: 16),
+      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
       onTap: () {},
     );
   }

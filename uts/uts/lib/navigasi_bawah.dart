@@ -6,6 +6,8 @@ import 'package:uts/page/bayar.dart';
 import 'package:uts/page/inbox.dart';
 
 class BottomNavigation extends StatefulWidget {
+  const BottomNavigation({super.key});
+
   @override
   _BottomNavigationState createState() => _BottomNavigationState();
 }
@@ -32,13 +34,13 @@ class _BottomNavigationState extends State<BottomNavigation> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: _pages[_currentIndex],
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 95,
         child: BottomNavigationBar(
           backgroundColor: Colors.white,
           currentIndex: _currentIndex,
           onTap: _onTap,
-          selectedItemColor: Color.fromARGB(255, 205, 34, 51),
+          selectedItemColor: const Color.fromARGB(255, 205, 34, 51),
           unselectedItemColor: const Color.fromARGB(255, 61, 60, 60),
           type: BottomNavigationBarType.fixed,
           iconSize: 24,
@@ -64,7 +66,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         child: Column(
           children: [
             Icon(icon),
-            Text(label, style: TextStyle(fontSize: 10)),
+            Text(label, style: const TextStyle(fontSize: 10)),
           ],
         ),
       ),
@@ -75,24 +77,24 @@ class _BottomNavigationState extends State<BottomNavigation> {
   BottomNavigationBarItem _buildPayButton() {
     return BottomNavigationBarItem(
       icon: Transform.translate(
-        offset: Offset(0, -23),
+        offset: const Offset(0, -23),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 205, 34, 51),
+                color: const Color.fromARGB(255, 205, 34, 51),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
                   color: Colors.white,
                   width: 2,
                 ),
               ),
-              child: Icon(Icons.qr_code_scanner, color: Colors.white),
+              child: const Icon(Icons.qr_code_scanner, color: Colors.white),
             ),
-            SizedBox(height: 2),
-            Text('Pay', style: TextStyle(fontSize: 10)),
+            const SizedBox(height: 2),
+            const Text('Pay', style: TextStyle(fontSize: 10)),
           ],
         ),
       ),

@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 class Home extends StatelessWidget {
+  const Home({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -37,7 +39,7 @@ class Home extends StatelessWidget {
                       Row(
                         children: [
                           _buildIconContainer(Icons.favorite_outline, () {}),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           _buildIconContainer(Icons.support_agent, () {}),
                         ],
                       ),
@@ -56,7 +58,7 @@ class Home extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.all(16.0),
                           decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 205, 34, 51),
                             borderRadius: BorderRadius.circular(8),
@@ -64,21 +66,21 @@ class Home extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "Hi, FARADILLA ROUDHOTUL SA'NAA",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500),
                               ),
-                              SizedBox(height: 16),
+                              const SizedBox(height: 16),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   _buildBalanceCard("Your Balance",
                                       "Rp *********", Icons.arrow_circle_right),
-                                  SizedBox(width: 16),
+                                  const SizedBox(width: 16),
                                   _buildBalanceCard("Bonus Balance", " 0",
                                       Icons.arrow_circle_right,
                                       isBonus: true),
@@ -87,13 +89,13 @@ class Home extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(height: 16),
+                        const SizedBox(height: 16),
                         Container(
-                          padding: EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.all(16.0),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 color: Colors.black12,
                                 blurRadius: 3,
@@ -115,7 +117,7 @@ class Home extends StatelessWidget {
                         ),
                         GridView.count(
                           shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                           crossAxisCount: 4,
                           crossAxisSpacing: 0,
                           mainAxisSpacing: 0,
@@ -154,7 +156,7 @@ Widget _buildIconContainer(IconData icon, VoidCallback onPressed) {
     decoration: BoxDecoration(
       color: Colors.white,
       borderRadius: BorderRadius.circular(6),
-      boxShadow: [
+      boxShadow: const [
         BoxShadow(
           color: Colors.black12,
           blurRadius: 3,
@@ -162,7 +164,7 @@ Widget _buildIconContainer(IconData icon, VoidCallback onPressed) {
         ),
       ],
     ),
-    padding: EdgeInsets.all(4.0),
+    padding: const EdgeInsets.all(4.0),
     child: IconButton(
       icon: Icon(icon, color: Colors.black, size: 24),
       onPressed: onPressed,
@@ -174,11 +176,11 @@ Widget _buildBalanceCard(String label, String amount, IconData icon,
     {bool isBonus = false}) {
   return Expanded(
     child: Container(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black12,
             blurRadius: 6,
@@ -192,15 +194,15 @@ Widget _buildBalanceCard(String label, String amount, IconData icon,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(label, style: TextStyle(color: Colors.black)),
+              Text(label, style: const TextStyle(color: Colors.black)),
               Row(
                 children: [
                   if (isBonus)
-                    Row(
+                    const Row(
                       children: [
                         Icon(
                           Icons.access_time_filled,
-                          color: const Color.fromARGB(255, 243, 192, 63),
+                          color: Color.fromARGB(255, 243, 192, 63),
                           size: 20,
                         ),
                         SizedBox(width: 4),
@@ -208,7 +210,7 @@ Widget _buildBalanceCard(String label, String amount, IconData icon,
                     ),
                   Text(
                     amount,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                         fontSize: 16),
@@ -220,8 +222,8 @@ Widget _buildBalanceCard(String label, String amount, IconData icon,
           Icon(
             icon,
             color: isBonus
-                ? Color.fromARGB(255, 205, 34, 51)
-                : Color.fromARGB(255, 205, 34, 51),
+                ? const Color.fromARGB(255, 205, 34, 51)
+                : const Color.fromARGB(255, 205, 34, 51),
           ),
         ],
       ),
@@ -233,11 +235,11 @@ Widget _buildQuickActionButton(IconData icon, String label) {
   return Column(
     children: [
       CircleAvatar(
-        backgroundColor: Color.fromARGB(255, 205, 34, 51),
+        backgroundColor: const Color.fromARGB(255, 205, 34, 51),
         child: Icon(icon, color: Colors.white),
       ),
-      SizedBox(height: 8),
-      Text(label, style: TextStyle(fontSize: 12)),
+      const SizedBox(height: 8),
+      Text(label, style: const TextStyle(fontSize: 12)),
     ],
   );
 }
@@ -262,31 +264,31 @@ Widget _buildServiceIcon(IconData icon, String label) {
 }
 
 Widget _buildSwipeableBanner() {
-  final PageController _pageController = PageController();
-  int _currentPage = 0;
+  final PageController pageController = PageController();
+  int currentPage = 0;
 
-  Timer.periodic(Duration(seconds: 2), (Timer timer) {
-    if (_currentPage < 4) {
-      _currentPage++;
+  Timer.periodic(const Duration(seconds: 2), (Timer timer) {
+    if (currentPage < 4) {
+      currentPage++;
     } else {
-      _currentPage = 0;
+      currentPage = 0;
     }
-    _pageController.animateToPage(
-      _currentPage,
-      duration: Duration(milliseconds: 500),
+    pageController.animateToPage(
+      currentPage,
+      duration: const Duration(milliseconds: 500),
       curve: Curves.easeInOut,
     );
   });
 
   return Container(
-    margin: EdgeInsets.only(top: 16),
+    margin: const EdgeInsets.only(top: 16),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(8),
     ),
     child: AspectRatio(
       aspectRatio: 900 / 400,
       child: PageView.builder(
-        controller: _pageController,
+        controller: pageController,
         itemCount: 4,
         itemBuilder: (context, index) {
           return Padding(
@@ -312,12 +314,12 @@ Widget _buildBannerImage(String imagePath) {
 
 Widget _buildStyledBannerAd() {
   return Container(
-    margin: EdgeInsets.only(top: 16),
-    padding: EdgeInsets.all(16),
+    margin: const EdgeInsets.only(top: 16),
+    padding: const EdgeInsets.all(16),
     decoration: BoxDecoration(
       color: Colors.white,
       borderRadius: BorderRadius.circular(8),
-      boxShadow: [
+      boxShadow: const [
         BoxShadow(
           color: Colors.black12,
           blurRadius: 6,
@@ -331,7 +333,7 @@ Widget _buildStyledBannerAd() {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            const Text(
               "Best Deals",
               style: TextStyle(
                 fontSize: 18,
@@ -343,7 +345,7 @@ Widget _buildStyledBannerAd() {
               onPressed: () {
                 // Aksi ketika "See All" ditekan
               },
-              child: Text(
+              child: const Text(
                 "See All",
                 style: TextStyle(
                   color: Color.fromARGB(255, 205, 34, 51),
@@ -353,7 +355,7 @@ Widget _buildStyledBannerAd() {
             ),
           ],
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         SizedBox(
           height: 250,
           child: ListView(
@@ -365,21 +367,21 @@ Widget _buildStyledBannerAd() {
                 caption:
                     'Miliki layanan internet dan hiburan di rumah bersama keluarga dengan IndiHome.',
               ),
-              SizedBox(width: 16),
+              const SizedBox(width: 16),
               _buildBannerItem(
                 imagePath: 'images/best2.jpg',
                 title: 'Beli Voucher Games Harga Terjangkau Disini!',
                 caption:
                     'Baru nih! Ada menu voucher games baru dengan harga terjangkau di LinkAja loh.',
               ),
-              SizedBox(width: 16),
+              const SizedBox(width: 16),
               _buildBannerItem(
                 imagePath: 'images/best3.jpg',
                 title: 'Promo Bright Gas MyPertamina',
                 caption:
                     'Promo Bright Gas MyPertamina. Dengan Syarat dan Ketentuan Program yang berlaku.',
               ),
-              SizedBox(width: 16),
+              const SizedBox(width: 16),
               _buildBannerItem(
                 imagePath: 'images/best4.jpg',
                 title: 'Bayar BPJS Kesehatan Anti Ribet di LinkAja',
@@ -396,12 +398,12 @@ Widget _buildStyledBannerAd() {
 
 Widget _buildStyledBannerAd2() {
   return Container(
-    margin: EdgeInsets.only(top: 16),
-    padding: EdgeInsets.all(16),
+    margin: const EdgeInsets.only(top: 16),
+    padding: const EdgeInsets.all(16),
     decoration: BoxDecoration(
       color: Colors.white,
       borderRadius: BorderRadius.circular(8),
-      boxShadow: [
+      boxShadow: const [
         BoxShadow(
           color: Colors.black12,
           blurRadius: 6,
@@ -412,7 +414,7 @@ Widget _buildStyledBannerAd2() {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
@@ -425,7 +427,7 @@ Widget _buildStyledBannerAd2() {
             ),
           ],
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         SizedBox(
           height: 250,
           child: ListView(
@@ -437,21 +439,21 @@ Widget _buildStyledBannerAd2() {
                 caption:
                     'Miliki layanan internet dan hiburan di rumah bersama keluarga dengan IndiHome.',
               ),
-              SizedBox(width: 16),
+              const SizedBox(width: 16),
               _buildBannerItem(
                 imagePath: 'images/best2.jpg',
                 title: 'Beli Voucher Games Harga Terjangkau Disini!',
                 caption:
                     'Baru nih! Ada menu voucher games baru dengan harga terjangkau di LinkAja loh.',
               ),
-              SizedBox(width: 16),
+              const SizedBox(width: 16),
               _buildBannerItem(
                 imagePath: 'images/best3.jpg',
                 title: 'Promo Bright Gas MyPertamina',
                 caption:
                     'Promo Bright Gas MyPertamina. Dengan Syarat dan Ketentuan Program yang berlaku.',
               ),
-              SizedBox(width: 16),
+              const SizedBox(width: 16),
               _buildBannerItem(
                 imagePath: 'images/best4.jpg',
                 title: 'Bayar BPJS Kesehatan Anti Ribet di LinkAja',
@@ -475,7 +477,7 @@ Widget _buildBannerItem({
     width: 300,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(8),
-      boxShadow: [
+      boxShadow: const [
         BoxShadow(
           color: Colors.black12,
           blurRadius: 6,
@@ -497,21 +499,21 @@ Widget _buildBannerItem({
         ),
         Container(
           color: Colors.white,
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 caption,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 12,
                   color: Colors.grey,
                 ),

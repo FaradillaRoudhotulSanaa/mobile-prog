@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class History extends StatelessWidget {
+  const History({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -11,7 +13,7 @@ class History extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           centerTitle: true,
-          title: Text(
+          title: const Text(
             'Transaction History',
             style: TextStyle(
               color: Colors.black,
@@ -21,11 +23,11 @@ class History extends StatelessWidget {
           bottom: TabBar(
             labelColor: Colors.black,
             unselectedLabelColor: Colors.grey,
-            indicatorColor: Color.fromARGB(255, 205, 34, 51),
+            indicatorColor: const Color.fromARGB(255, 205, 34, 51),
             indicatorSize: TabBarIndicatorSize.tab,
             splashFactory: NoSplash.splashFactory,
-            overlayColor: MaterialStateProperty.all(Colors.transparent),
-            tabs: [
+            overlayColor: WidgetStateProperty.all(Colors.transparent),
+            tabs: const [
               Tab(text: 'Pending'),
               Tab(text: 'Done'),
             ],
@@ -52,8 +54,8 @@ class History extends StatelessWidget {
             'images/history-pending.png',
             height: 200,
           ),
-          SizedBox(height: 24),
-          Text(
+          const SizedBox(height: 24),
+          const Text(
             'All transaction is completed!',
             style: TextStyle(
               fontSize: 18,
@@ -61,7 +63,7 @@ class History extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             'Any pending transaction will appear in this page',
             style: TextStyle(
@@ -101,14 +103,14 @@ class History extends StatelessWidget {
     ];
 
     return ListView.builder(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       itemCount: transactions.length,
       itemBuilder: (context, index) {
         final transaction = transactions[index];
 
         return Card(
           color: Colors.white,
-          margin: EdgeInsets.only(bottom: 16),
+          margin: const EdgeInsets.only(bottom: 16),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -124,7 +126,7 @@ class History extends StatelessWidget {
                     // Title
                     Text(
                       transaction['title']!,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -132,7 +134,7 @@ class History extends StatelessWidget {
                     // Amount
                     Text(
                       transaction['amount']!,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
@@ -140,7 +142,7 @@ class History extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 // Date and Status Section
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -158,17 +160,17 @@ class History extends StatelessWidget {
                       children: [
                         Text(
                           transaction['status']!,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.green,
                             fontWeight: FontWeight.bold,
                             fontSize: 14,
                           ),
                         ),
-                        SizedBox(width: 4),
+                        const SizedBox(width: 4),
                         Container(
                           width: 6,
                           height: 6,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.green,
                             shape: BoxShape.circle,
                           ),
@@ -177,13 +179,13 @@ class History extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 // Divider line between date and description
                 Divider(
                   color: Colors.grey[300], // Adjust color if needed
                   thickness: 1, // Adjust thickness if needed
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 // Description Section
                 Text(
                   transaction['description']!,
