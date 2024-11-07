@@ -1,0 +1,125 @@
+{
+   "checksum": "25347097e951af31283cdc0b52eb461b",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13375438878582120",
+            "date_last_used": "0",
+            "guid": "2ac3c59b-f130-44d3-a59e-f34a38a47022",
+            "id": "17",
+            "name": "ASUS Software Portal - Exclusive technology",
+            "type": "url",
+            "url": "https://www.asus.com/Software-and-Innovations-Portal/"
+         }, {
+            "date_added": "13375438878581929",
+            "date_last_used": "0",
+            "guid": "8bc22112-3662-4d3b-a8f4-57cf2c84963f",
+            "id": "16",
+            "name": "MyASUS Software - Get the best from ASUS PC",
+            "type": "url",
+            "url": "https://www.asus.com/ASUS-Software/"
+         }, {
+            "date_added": "13375438878581409",
+            "date_last_used": "0",
+            "guid": "ec433e8c-aad4-496b-8b9d-d63d6577aff7",
+            "id": "15",
+            "name": "McAfee LiveSafe",
+            "type": "url",
+            "url": "https://home.mcafee.com/root/campaign.aspx?cid=247829"
+         }, {
+            "date_added": "13339047382516721",
+            "date_last_used": "13369712978571677",
+            "guid": "79c5239c-9650-4458-8651-02a899cf6996",
+            "id": "9",
+            "name": "GitHub",
+            "type": "url",
+            "url": "https://github.com/"
+         }, {
+            "date_added": "13359393662370585",
+            "date_last_used": "0",
+            "guid": "bee2438b-9667-4d37-af38-98870c63952b",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "SIWALANG UI – Figma",
+            "type": "url",
+            "url": "https://www.figma.com/file/Ckq92HlHHhKgrS0CZ7lIJC/SIWALANG-UI?type=design&node-id=0-1&mode=design&t=XDsr2LLsM5KRFdRO-0"
+         }, {
+            "date_added": "13370317716891798",
+            "date_last_used": "0",
+            "guid": "4ebdb96e-6813-441d-8130-851a25287009",
+            "id": "11",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Codelabs: Pemrograman Mobile",
+            "type": "url",
+            "url": "https://jti-polinema.github.io/flutter-codelab/"
+         }, {
+            "date_added": "13370402646792688",
+            "date_last_used": "0",
+            "guid": "3456af59-6da2-444b-9d49-9b68ec9840c7",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Welcome Aboard! | JTI - Modul Praktikum Pembelajaran Mesin",
+            "type": "url",
+            "url": "https://polinema.gitbook.io/jti-modul-praktikum-pembelajaran-mesin"
+         }, {
+            "date_added": "13375438722912496",
+            "date_last_used": "0",
+            "guid": "7c5f1643-d10d-4035-ad02-8593dd21ec15",
+            "id": "8",
+            "name": "ASUS Software Portal - Exclusive technology",
+            "type": "url",
+            "url": "https://www.asus.com/Software-and-Innovations-Portal/"
+         }, {
+            "date_added": "13375438722912338",
+            "date_last_used": "0",
+            "guid": "6e5322e1-124f-4b4e-8253-fb7848bd9071",
+            "id": "7",
+            "name": "MyASUS Software - Get the best from ASUS PC",
+            "type": "url",
+            "url": "https://www.asus.com/ASUS-Software/"
+         }, {
+            "date_added": "13375438722911319",
+            "date_last_used": "0",
+            "guid": "73cde72c-b8cb-4c95-8ba2-9dccf838133a",
+            "id": "6",
+            "name": "McAfee LiveSafe",
+            "type": "url",
+            "url": "https://home.mcafee.com/root/campaign.aspx?cid=247829"
+         } ],
+         "date_added": "13375438722638995",
+         "date_last_used": "0",
+         "date_modified": "13375438878582120",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13375438722638998",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13375438722639000",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
