@@ -1,7 +1,9 @@
+// main.dart
 import 'package:flutter/material.dart';
-import 'package:belanja/models/item.dart';
-import 'package:belanja/pages/ItemPage.dart';
-import 'package:belanja/pages/HomePage.dart';
+import 'package:go_router/go_router.dart';
+import 'models/item.dart';
+import 'pages/HomePage.dart';
+import 'pages/ItemPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,13 +12,35 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Belanja App',
-      initialRoute: '/',
-      routes: {
-        '/': (context) => HomePage(),
-        '/item': (context) => ItemPage(), // Tambahkan rute ini
-      },
+    final GoRouter _router = GoRouter(
+      initialLocation: '/',
+      routes: [
+        GoRoute(
+          path: '/',
+          builder: (context, state) => HomePage(),
+        ),
+        GoRoute(
+          path: '/item',
+          builder: (context, state) {
+            // Cek apakah state.extra berisi item atau tidak
+            if (state.extra == null || state.extra is! Item) {
+              return Scaffold(
+                body: Center(child: Text("Item tidak ditemukan!")),
+              );
+            }
+            final item = state.extra as Item;
+            return ItemPage(item: item);
+          },
+        ),
+      ],
+    );
+
+    return MaterialApp.router(
+      title: 'Nana K-Pop Store',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      routerConfig: _router,
     );
   }
 }

@@ -1,9 +1,9 @@
 class Item {
-  String name;      
-  int price;       
-  String imageUrl; 
-  int stock;       
-  double rating;   
+  final String name;
+  final int price;
+  final String imageUrl;
+  final int stock;
+  final double rating;
 
   Item({
     required this.name,
