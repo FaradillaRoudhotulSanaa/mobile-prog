@@ -13,14 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Future Demo',
+      title: 'Flutter Demo - Faradilla',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const FuturePage(),
     );
-    throw UnimplementedError();
   }
 }
 
@@ -33,27 +32,28 @@ class FuturePage extends StatefulWidget {
 
 class _FuturePageState extends State<FuturePage> {
   String result = '';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Back from the Future'),
+        title: const Text('Back from the Future - Faradilla'),
       ),
       body: Center(
-        child: Column(children: [
-          const Spacer(),
-          ElevatedButton(
-            child: const Text('GO!'),
-            onPressed: () {},
-          ),
-          const Spacer(),
-          Text(result),
-          const Spacer(),
-          const CircularProgressIndicator(),
-          const Spacer(),
-        ]),
+        child: Column(
+          children: [
+            const Spacer(),
+            ElevatedButton(
+              child: const Text('GO!'),
+              onPressed: () {},
+            ),
+            const Spacer(),
+            Text(result),
+            const Spacer(),
+            const CircularProgressIndicator(),
+            const Spacer(),
+          ],
+        ),
       ),
-    ),
-  };
+    );
+  }
 }
