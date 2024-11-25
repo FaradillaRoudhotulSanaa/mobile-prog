@@ -1,16 +1,68 @@
-# stream_nana
+### Faradilla Roudhotul Sa'naa 
+### 2241720205 / 11 / TI-3B
 
-A new Flutter project.
+# Lanjutan State Management dengan Streams
+## Parktikum 1 : Dart Streams 
 
-## Getting Started
+### Soal 1 
+1. Tambahkan nama panggilan Anda pada title app sebagai identitas hasil pekerjaan Anda.
+2. Gantilah warna tema aplikasi sesuai kesukaan Anda.
+```dart 
+import 'package:flutter/material.dart';
 
-This project is a starting point for a Flutter application.
+void main() {
+  runApp(const MyApp());
+}
 
-A few resources to get you started if this is your first Flutter project:
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Stream Nana',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+      ),
+      home: const StreamHomePage(),
+    );
+  }
+}
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+class StreamHomePage extends StatefulWidget {
+  const StreamHomePage({super.key});
+
+  @override
+  State<StatefulWidget> createState() => _StreamHomePageState();
+}
+class _StreamHomePageState extends State<StreamHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+} 
+```
+
+### Soal 2 
+1. Tambahkan 5 warna lainnya sesuai keinginan Anda pada variabel colors tersebut.
+```dart 
+ final List<Color> colors = [
+    Colors.blueGrey,
+    Colors.amber,
+    Colors.deepPurple,
+    Colors.lightBlue,
+    Colors.teal,
+    Colors.lightGreen,
+    Colors.pink,
+    Colors.black,
+    Colors.white,
+    Colors.brown
+  ];
+```
+
+### Soal 3
+1. Jelaskan fungsi keyword yield* pada kode tersebut! <br>
+    **Jawab :** yield* digunakan untuk mengalirkan semua data dari stream atau daftar lain (iterable) ke luar, tanpa harus mengirimkan satu per satu secara manual.
+
+2. Apa maksud isi perintah kode tersebut? <br>
+    **Jawab :** Kode tersebut membuat sebuah stream yang menghasilkan warna dari daftar colors setiap 1 detik secara bergiliran. Hasilnya, stream ini akan mengalirkan warna dari daftar colors secara berulang-ulang, satu warna setiap detik.
