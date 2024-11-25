@@ -66,3 +66,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
 
 2. Apa maksud isi perintah kode tersebut? <br>
     **Jawab :** Kode tersebut membuat sebuah stream yang menghasilkan warna dari daftar colors setiap 1 detik secara bergiliran. Hasilnya, stream ini akan mengalirkan warna dari daftar colors secara berulang-ulang, satu warna setiap detik.
+
+### Soal 4
+1. Capture hasil praktikum Anda berupa GIF dan lampirkan di README. 
+    ![Hasil](images/Run-Prak1.gif)
