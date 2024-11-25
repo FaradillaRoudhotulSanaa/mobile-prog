@@ -76,7 +76,19 @@ class _StreamHomePageState extends State<StreamHomePage> {
     **Jawab :** 
     - listen digunakan untuk kebutuhan real-time atau respons yang tidak memblokir, seperti UI yang diperbarui terus-menerus saat data diterima.
     - await for digunakan jika Anda ingin alur pemrosesan data yang sekuensial dan linear, seperti saat setiap langkah memerlukan penyelesaian sebelum melanjutkan.
-    
+
+## Parktikum 2 : Stream controllers dan sinks
+### Soal 6
+1. Jelaskan maksud kode langkah 8 dan 10 tersebut! <br>
+    **Jawab :** Pada langkah 8, sebuah stream dibuat untuk menerima data secara terus-menerus dari NumberStream, dan setiap data yang diterima akan direspons oleh fungsi listen. Fungsi ini mengupdate nilai lastNumber di dalam aplikasi setiap kali ada angka baru yang dikirim ke stream. Kemudian, pada langkah 10, fungsi addRandomNumber digunakan untuk membuat angka acak antara 0 sampai 9 menggunakan kelas Random dan angka tersebut dimasukkan ke dalam stream melalui metode addNumberToSink. Dengan ini, aplikasi bisa secara dinamis menerima dan menampilkan angka baru setiap kali fungsi addRandomNumber dipanggil.
+    ![Hasil](images/Run-Prak2.gif)
+
+
+
+
+
+
+
 
 
 
