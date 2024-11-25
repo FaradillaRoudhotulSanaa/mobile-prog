@@ -70,3 +70,15 @@ class _StreamHomePageState extends State<StreamHomePage> {
 ### Soal 4
 1. Capture hasil praktikum Anda berupa GIF dan lampirkan di README. 
     ![Hasil](images/Run-Prak1.gif)
+
+### Soal 5
+1. Jelaskan perbedaan menggunakan listen dan await for (langkah 9) ! <br>
+    **Jawab :** 
+    - listen digunakan untuk kebutuhan real-time atau respons yang tidak memblokir, seperti UI yang diperbarui terus-menerus saat data diterima.
+    - await for digunakan jika Anda ingin alur pemrosesan data yang sekuensial dan linear, seperti saat setiap langkah memerlukan penyelesaian sebelum melanjutkan.
+    
+
+
+
+
+
