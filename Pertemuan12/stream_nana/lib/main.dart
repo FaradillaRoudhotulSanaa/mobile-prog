@@ -27,6 +27,7 @@ class StreamHomePage extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() => _StreamHomePageState();
+
 }
 
 class _StreamHomePageState extends State<StreamHomePage> {
@@ -101,5 +102,6 @@ class _StreamHomePageState extends State<StreamHomePage> {
     Random random = Random();
     int myNum = random.nextInt(10);
     numberStream.addNumberToSink(myNum);
+    // numberStream.addError();
   }
 }

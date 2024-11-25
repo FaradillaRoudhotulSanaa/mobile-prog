@@ -83,6 +83,13 @@ class _StreamHomePageState extends State<StreamHomePage> {
     **Jawab :** Pada langkah 8, sebuah stream dibuat untuk menerima data secara terus-menerus dari NumberStream, dan setiap data yang diterima akan direspons oleh fungsi listen. Fungsi ini mengupdate nilai lastNumber di dalam aplikasi setiap kali ada angka baru yang dikirim ke stream. Kemudian, pada langkah 10, fungsi addRandomNumber digunakan untuk membuat angka acak antara 0 sampai 9 menggunakan kelas Random dan angka tersebut dimasukkan ke dalam stream melalui metode addNumberToSink. Dengan ini, aplikasi bisa secara dinamis menerima dan menampilkan angka baru setiap kali fungsi addRandomNumber dipanggil.
     ![Hasil](images/Run-Prak2.gif)
 
+### Soal 7
+1. Jelaskan maksud kode langkah 13 sampai 15 tersebut! <br>
+    **Jawab :** 
+    - Langkah 13 : method addError() ditambahkan untuk memasukkan sebuah pesan kesalahan ('error') ke dalam stream. Ini memungkinkan pengembang untuk memicu kesalahan secara manual dalam aliran data untuk pengujian atau simulasi. <br>
+    - Langkah 14 : method onError ditambahkan ke fungsi listen pada stream. Ini digunakan untuk mendeteksi kesalahan yang dikirim ke stream (seperti dari metode addError()) dan merespons dengan mengganti nilai lastNumber menjadi -1. Nilai ini bisa dianggap sebagai indikator bahwa kesalahan telah terjadi.<br>
+    - Langkah 15 : fungsi addRandomNumber() diubah untuk tidak lagi menghasilkan angka acak dan memasukkannya ke stream. Sebagai gantinya, metode addError() dipanggil untuk memicu kesalahan dalam aliran data. Perubahan ini digunakan untuk menguji apakah mekanisme penanganan kesalahan di langkah sebelumnya bekerja dengan benar.
+
 
 
 
